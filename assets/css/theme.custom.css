@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "HKNovaRoundedM";
+  font-weight: 500;
+  src: url("../fonts/HKNovaRounded_1013WM/HKNovaRounded_1013WM/HKNova-MediumR.woff2") format("woff2"), url("../fonts/HKNovaRounded_1013WM/HKNovaRounded_1013WM/HKNova-MediumR.woff") format("woff"); }
+
+@font-face {
+  font-family: "HKNovaRoundedSB";
+  font-weight: 600;
+  src: url("../fonts/HKNovaRounded_1013WSB/HKNovaRounded_1013WSB/HKNova-SemiBoldR.woff2") format("woff2"), url("../fonts/HKNovaRounded_1013WSB/HKNovaRounded_1013WSB/HKNova-SemiBoldR.woff") format("woff"); }
+
+.hknovar {
+  font-family: "HKNovaRoundedSB"; }
+
+.hknovar-m {
+  font-family: "HKNovaRoundedM"; }
