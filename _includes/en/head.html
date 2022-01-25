@@ -26,11 +26,13 @@
   <meta name="twitter:image:alt" content="Mobair Logo">
 
   {% if page.url == "/" %}
-    <link rel="alternate" hreflang="se" href="https://mobair.se" />
-    <link rel="alternate" hreflang="en" href="https://mobair.se/en/" />
+  <link rel="alternate" hreflang="se" href="https://mobair.se" />
+  <link rel="alternate" hreflang="en" href="https://mobair.se/en/" />
+  <link rel="alternate" hreflang="no" href="https://mobair.se/no/" />
   {% else %}
-    <link rel="alternate" hreflang="se" href="https://mobair.se{{ page.hreflang-se }}" />
-    <link rel="alternate" hreflang="en" href="https://mobair.se/en/{{ page.hreflang-en }}" />
+  <link rel="alternate" hreflang="se" href="https://mobair.se{{ page.hreflang-se }}" />
+  <link rel="alternate" hreflang="en" href="https://mobair.se/en{{ page.hreflang-en }}" />
+  <link rel="alternate" hreflang="no" href="https://mobair.se/no{{ page.hreflang-no }}" />
   {% endif %}
 
   <script type="application/ld+json">{{ page.ldjson }}</script>
@@ -44,5 +46,7 @@
   <link rel="stylesheet" href="/assets/css/flag-icons.min.css">
   
   {%- feed_meta -%}
+
+  {%- include matomo.html -%}
 
 </head>

@@ -1,0 +1,52 @@
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {% if page.url == "/no/" %}
+    <title>{{ site.title }}: {{ page.title }}</title>
+  {% else %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+  {% endif %}
+
+  <meta name="Description" CONTENT="{{ page.description }}">
+  <meta content="{{ page.title }}" property="og:title">
+  <meta content="no_NO" property="og:locale">
+  <meta content="site.title" property="og:site_name">
+  <meta content="website" property="og:type">
+  <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+  <meta content="{{ page.title }} | {{ site.title }}" property="og:title">
+  <meta content="{{ page.description }}" property="og:description">
+  <meta content="https://mobair.se/assets/images/mobair-logo-440x99.png" property="og:image">
+  <meta content="Mobair Logo" property="og:image:alt">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }} | {{ site.title }}">
+  <meta name="twitter:description" content="page.description">
+  <meta name="twitter:image" content="https://mobair.se/assets/images/mobair-logo-440x99.png">
+  <meta name="twitter:image:alt" content="Mobair Logo">
+
+  {% if page.url == "/" %}
+  <link rel="alternate" hreflang="se" href="https://mobair.se" />
+  <link rel="alternate" hreflang="en" href="https://mobair.se/en/" />
+  <link rel="alternate" hreflang="no" href="https://mobair.se/no/" />
+  {% else %}
+  <link rel="alternate" hreflang="se" href="https://mobair.se{{ page.hreflang-se }}" />
+  <link rel="alternate" hreflang="en" href="https://mobair.se/en{{ page.hreflang-en }}" />
+  <link rel="alternate" hreflang="no" href="https://mobair.se/no{{ page.hreflang-no }}" />
+  {% endif %}
+
+  <script type="application/ld+json">{{ page.ldjson }}</script>
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="/assets/css/libs.bundle.css">
+  <link rel="stylesheet" href="/assets/css/theme.bundle.css">
+  <link rel="stylesheet" href="/assets/css/theme.custom.css">
+
+  <!-- Flag icon CSS -->
+  <link rel="stylesheet" href="/assets/css/flag-icons.min.css">
+  
+  {%- feed_meta -%}
+
+  {%- include matomo.html -%}
+
+</head>
